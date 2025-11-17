@@ -312,7 +312,7 @@
     mode = btn.dataset.mode;
 
     if(mode === 'pve') {
-      player2NameEl.innerText = 'Computer';
+      player2NameEl.innerText = 'Player O';
     } else {
       player2NameEl.innerText = 'Player O';
     }

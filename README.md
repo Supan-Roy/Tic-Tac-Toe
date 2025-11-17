@@ -4,7 +4,6 @@ A modern, fully responsive Tic Tac Toe game built with **HTML, CSS, and JavaScri
 
 Live Demo → **[https://tic-tac-roy.netlify.app/](https://tic-tac-roy.netlify.app/)**
 
----
 
 ## ✨ Features
 
@@ -19,7 +18,6 @@ Live Demo → **[https://tic-tac-roy.netlify.app/](https://tic-tac-roy.netlify.a
 * ⭐ Winning line highlight
 * 🔁 Reset Game / New Round options
 
----
 
 ## 🧠 AI Logic (Medium Difficulty)
 
@@ -33,7 +31,6 @@ The AI follows this priority:
 
 Provides a fair opponent without being unbeatable.
 
----
 
 ## 📂 Project Structure
 
@@ -43,7 +40,6 @@ Provides a fair opponent without being unbeatable.
 /app.js         -> Game logic, AI, sounds, scoreboard, animations
 ```
 
----
 
 ## 🚀 How to Run
 
@@ -55,7 +51,6 @@ index.html
 
 No installations, no dependencies — works directly in the browser.
 
----
 
 ## 📱 Mobile Support
 
@@ -63,7 +58,6 @@ No installations, no dependencies — works directly in the browser.
 * Touch-friendly UI
 * Stacked layout for small screens
 
----
 
 ## 🛠️ Technologies Used
 
@@ -72,7 +66,6 @@ No installations, no dependencies — works directly in the browser.
 * **Vanilla JavaScript**
 * **Web Audio API**
 
----
 
 ## 👤 Author
 

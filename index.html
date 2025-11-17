@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-dark">
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <h1>Tic Tac Toe</h1>
+        <div class="subtitle">Made By - Supan Roy</div>
+      </div>
+
+      <div class="controls">
+       <div class="mode-buttons">
+  <button class="mode-btn active" data-mode="pvp">Player vs Player</button>
+  <button class="mode-btn" data-mode="pve">Player vs AI</button>
+</div>
+
+
+        <!-- <div class="theme">
+          <label class="switch">
+            <input id="theme-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <small id="theme-label">Light</small>
+        </div> -->
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="left-panel">
+        <div class="scoreboard glass">
+          <div class="score-row">
+            <div class="player p1">
+              <div class="avatar">X</div>
+              <div>
+                <div class="name">Player X</div>
+                <div class="score" id="score-x">0</div>
+              </div>
+            </div>
+
+            <div class="versus">vs</div>
+
+            <div class="player p2">
+              <div class="avatar">O</div>
+              <div>
+                <div class="name" id="player-2-name">Player O</div>
+                <div class="score" id="score-o">0</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-row">
+            <div class="turn-indicator glass" id="turn-indicator">
+              Turn: <span id="turn-player">O</span>
+            </div>
+
+            <div class="buttons">
+              <button id="reset-btn" class="btn secondary">Reset Game</button>
+              <button id="new-btn" class="btn">New Round</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="board-panel">
+        <div class="board-wrap">
+          <div class="board glass" id="board">
+            <!-- nine boxes -->
+            <button class="box" data-index="0"></button>
+            <button class="box" data-index="1"></button>
+            <button class="box" data-index="2"></button>
+            <button class="box" data-index="3"></button>
+            <button class="box" data-index="4"></button>
+            <button class="box" data-index="5"></button>
+            <button class="box" data-index="6"></button>
+            <button class="box" data-index="7"></button>
+            <button class="box" data-index="8"></button>
+
+            <!-- overlay for winning line -->
+            <div id="win-line" class="win-line hidden" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Result modal -->
+  <div id="result-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card glass">
+      <div id="result-text" class="result-text">Winner: X</div>
+      <div class="modal-actions">
+        <button id="modal-new" class="btn">New Round</button>
+        <button id="modal-reset" class="btn secondary">Reset Scores</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation modal -->
+  <div id="confirm-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card glass confirm-card">
+      <div class="confirm-icon">⚠️</div>
+      <div class="confirm-title">Reset Game?</div>
+      <div class="confirm-message">This will reset the board and clear all scores. This action cannot be undone.</div>
+      <div class="modal-actions">
+        <button id="confirm-cancel" class="btn secondary">Cancel</button>
+        <button id="confirm-ok" class="btn danger">Reset Everything</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -89,6 +89,18 @@ body{
   text-transform: uppercase;
 }
 
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer .subtitle {
+  margin: 0;
+}
+
 /* Controls */
 .controls{
   display:flex;

@@ -103,6 +103,24 @@
     modal.classList.add('hidden');
   }
 
+  // Confetti effect for celebrations
+  function createConfetti() {
+    const colors = ['#7bd389', '#7bd3ff', '#ffd37b', '#00ffd5'];
+    const confettiCount = 50;
+    
+    for(let i = 0; i < confettiCount; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDelay = Math.random() * 0.5 + 's';
+      confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      document.body.appendChild(confetti);
+      
+      setTimeout(() => confetti.remove(), 4000);
+    }
+  }
+
   // Confirmation modal
   function showConfirm() {
     return new Promise((resolve) => {
@@ -194,7 +212,24 @@
         setTimeout(()=> {
           showWinningLine(res.pattern);
           soundWin();
-          showModal(`Congratulations — Winner: ${res.winner}`);
+          
+          // Custom messages for AI mode
+          let message;
+          if(mode === 'pve') {
+            if(res.winner === 'X') {
+              // AI won (X is AI in PvE after human's first move)
+              message = '😔 You Lost This Time!';
+            } else {
+              // Human won (O)
+              message = '🎉 Congratulations! You Won!';
+              createConfetti();
+            }
+          } else {
+            // PvP mode
+            message = `Congratulations — Winner: ${res.winner}`;
+          }
+          
+          showModal(message);
         }, 180);
       } else {
         // draw

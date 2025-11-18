@@ -412,6 +412,28 @@ body.theme-light .player .avatar{ color:#07192b } */
   box-shadow: 0 10px 30px rgba(255,107,107,0.4);
 }
 
+/* Confetti Animation */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  z-index: 100;
+  animation: confetti-fall linear forwards;
+  border-radius: 2px;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
 @media (max-width: 780px) {
   body {
     padding: 16px 12px;

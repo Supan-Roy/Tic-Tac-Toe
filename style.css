@@ -450,13 +450,23 @@ body.theme-light .player .avatar{ color:#07192b } */
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
   }
   
   .player {
-    flex: 1;
-    min-width: 140px;
+    flex: 0 0 auto;
+    min-width: 120px;
     gap: 10px;
+    justify-content: flex-start;
+  }
+  
+  .player.p1 {
+    order: 1;
+  }
+  
+  .player.p2 {
+    order: 3;
   }
   
   .player .avatar {
@@ -474,10 +484,11 @@ body.theme-light .player .avatar{ color:#07192b } */
   }
   
   .versus {
-    flex-basis: 100%;
+    flex: 0 0 auto;
     text-align: center;
+    font-size: 16px;
+    margin: 0 8px;
     order: 2;
-    margin: 6px 0;
   }
 
   .status-row {
